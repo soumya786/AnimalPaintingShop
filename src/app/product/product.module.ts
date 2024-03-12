@@ -6,6 +6,7 @@ import { FlexModule } from '@angular/flex-layout';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatInputModule} from '@angular/material/input';
+import { MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {MatInputModule} from '@angular/material/input';
     FlexModule,
     MatDividerModule,
     MatSnackBarModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule
   ]
 })
 export class ProductModule { }
