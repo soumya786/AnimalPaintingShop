@@ -1,0 +1,25 @@
+<div class="container p-3">
+  <h2 class="mt-2">Our latest collection</h2>
+  <mat-divider class="mb-3"></mat-divider>
+  <div
+    fxLayout="row wrap"
+    fxLayoutGap="50px grid"
+    class="align-items-center justify-content-center"
+  >
+    <div *ngFor="let product of filteredProduct">
+      <mat-card class="product-card" (click)="addToCart(product)">
+        <img
+          mat-card-image
+          src="assets/images/{{ product.image_url }}"
+          alt="Photo Unavailable"
+        />
+        <mat-card-content>
+          <mat-card-title>{{ product.name }}</mat-card-title>
+          <mat-card-subtitle
+            >{{ product.price | currency : "INR" }}
+          </mat-card-subtitle>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
